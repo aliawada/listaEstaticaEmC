@@ -33,6 +33,7 @@
 													    if	(	!	minhaLista	)	return	1	; //	Evita	erro	se	malloc	falhar
 													
 													    //	Inserindo	elementos
+													    
 													    insere	(	minhaLista	,	10	)	;
 													    
 													    insere	(	minhaLista	,	20	)	;
@@ -41,7 +42,7 @@
 													    
 													    printf	(	"	\n	Lista	apos	insercoes	:	\n	\n"	);	
 													    
-													    imprime2	(	minhaLista	)	;
+													    imprime	(	minhaLista	)	;
 													
 													    //	Removendo	um	elemento
 													    
@@ -49,7 +50,7 @@
 													
 													    printf	(	"	\n	Lista	apos	remover	20	:	\n	\n	"	)	;	
 													    
-													    imprime2	(	minhaLista	)	;
+													    imprime	(	minhaLista	)	;
 													
 													    //	Testando	lista	vazia
 													    

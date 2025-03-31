@@ -25,57 +25,47 @@
 															
 															
 															
-															#ifndef LISTA_ESTATICA_2_H
-															#define LISTA_ESTATICA_2_H
+													#ifndef LISTA_ESTATICA_2_H
+													#define LISTA_ESTATICA_2_H
 															
-															#define TAM_MAX 1000 //	numero	maximo	de	itens	na	lista
-															#include <stdlib.h>	//	Necessário	para	malloc
-															#include <stdio.h>	//	Necessário	para	printf
+													#define TAM_MAX 1000 //	numero	maximo	de	itens	na	lista
+													#include <stdlib.h>	//	Necessário	para	malloc
+													#include <stdio.h>	//	Necessário	para	printf
 															
-															typedef	int	TipoItem;
+													typedef	int	TipoItem;
 															
-															//	estrutura	para	lista	estatica
+													//	estrutura	para	lista	estatica
 															
-															typedef	struct	{
+													typedef	struct	{
 																
-																TipoItem	item	[	TAM_MAX	]	;
+														TipoItem	item	[	TAM_MAX	]	;
 																
-															    int	primeiro	,	ultimo	;
+														int	primeiro	,	ultimo	;
 																
-																int	pos;	//	usado	para	implementar	iterador
+														int	pos	;	//	usado	para	implementar	iterador
 																
-															}	Lista;
+													}	Lista	;
 															
 															
 															
-															//	Cria	uma	lista	vazia
+													//	Cria	uma	lista	vazia
 															
-															Lista*	cria_lista_vazia	(	)	;
+													Lista*	cria_lista_vazia	(	)	;
+																
+													//	Testa	se	uma	lista	evazia
 															
+													int	vazia	(	Lista*	l	)	;
 															
+													//	Insere	um	item	na	lista
 															
-															//	Testa	se	uma	lista	evazia
+													void	insere	(	Lista*	l	,	TipoItem	x	)	;
 															
-															int	vazia(Lista	*	l);
+													//	Retira	o	item	da	lista
 															
+													void	retira	(	Lista*	l	,	TipoItem	x	)	;
 															
+													//	Imprime	os	itens	da	lista
 															
-															//	Insere	um	item	na	lista
+													void	imprime	(	Lista*	l	)	;
 															
-															void	insere	(	Lista*	l	,	TipoItem	x	)	;
-															
-															
-															
-															//	Retira	o	item	da	lista
-															
-															void	retira	(	Lista*	l	,	TipoItem	x	)	;
-															
-															
-															
-															//	Imprime	os	itens	da	lista
-															
-															void	imprime	(	Lista*	l	)	;
-															
-															
-															
-															#endif	//	LISTA_ESTATICA_2_H
+													#endif	//	LISTA_ESTATICA_2_H
