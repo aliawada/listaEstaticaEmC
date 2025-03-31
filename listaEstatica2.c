@@ -28,8 +28,7 @@
                  
 												     
 									                #include "listaEstatica2.h"
-													               
-													               
+													                
 													Lista*	cria_lista_vazia	(	)	{	
 																																																																			 
 														Lista	*nova_lista	=	(	Lista*	)	malloc	(	sizeof	(	Lista	)	)	;
