@@ -61,6 +61,7 @@
 																	
 													void	insere	(	Lista*	l	,	TipoItem	x	)	{
 														
+												
 														if	(	l	->	ultimo	>=	TAM_MAX	)	{
 															
 															printf	(	"	Erro	:	Lista	cheia,	não	é	possível	inserir	%d	\n	\n	"	,	x	)	;
@@ -68,8 +69,10 @@
 															return	;
 																	        
 														}
+														
 																	
 														l	->	item	[	l	->	ultimo	]	=	x	;	//	Adiciona	o	item	na	última	posição	disponível
+														
 														l	->	ultimo	++	;	//	Atualiza	o	índice	do	último	elemento
 													}
 																	
@@ -80,6 +83,7 @@
 													//	Pós-condição:	Item	removido	e	elementos	ajustados
 																	
 													void	retira	(	Lista*	l	,	TipoItem	x	)	{
+														
 																		
 														if	(	vazia	(	l	)	)	{
 																	    	
@@ -88,8 +92,10 @@
 															return	;
 																	        
 														}
+														
 																	
 														int	i	,	encontrado	=	0	;
+														
 																	    
 														for	(	i	=	0	;	i	<	l	->	ultimo	;	i	++	)	{
 																	        
@@ -102,6 +108,7 @@
 															}
 																	        
 														}
+														
 																	
 														if	(	!	encontrado	)	{
 																	        
@@ -110,12 +117,14 @@
 															return	;
 														
 														}
+														
 																	
 														for	(	;	i	<	l	->	ultimo	-	1	;	i	++	)	{
 																	    	
 															l	->	item	[	i	]	=	l	->	item	[	i	+	1	]	;
 																	        
 														}
+														
 																	
 														l	->	ultimo	--	;
 																	    
@@ -144,6 +153,7 @@
 													TipoItem	proximo	(	Lista*	l)	{
 																			
 														l	->	pos	++	;
+														
 																		
 														if	(	l	->	pos	>=	l	->	ultimo	)
 																		
@@ -152,7 +162,7 @@
 														else
 																		
 															return	l	->	item	[	l	->	pos	]	;
-																	
+															
 													}
 													
 													//	Imprime	os	itens	da	lista
@@ -170,12 +180,14 @@
 														else	{
 																			
 															int	i	=	0	;
-																			
+															
 															printf	(	"	[	"	)	;
-																			
+															
+															
 															for	(	i	=	l	->	primeiro	;	i	<	l	->	ultimo	;	i	++	)
 																			
 																printf	(	"	%d	"	,	l	->	item	[	i	]	)	;
+																
 																			
 															printf	(	"	]	\n	\n	"	)	;
 																		
@@ -199,11 +211,13 @@
 																				
 															printf	(	"	[	"	)	;
 																			
+																			
 														do
 																				
 															printf	(	"	%d	"	,	x	)	;
 																				
 														while	(	(	x	=	proximo	(	l	)	)	!=	-1	)	;
+														
 																				
 														printf	(	"	]	\n	"	)	;
 																					

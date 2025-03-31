@@ -26,13 +26,16 @@
 															
 															
 													#ifndef LISTA_ESTATICA_2_H
+													
 													#define LISTA_ESTATICA_2_H
 															
 													#define TAM_MAX 1000 //	numero	maximo	de	itens	na	lista
+													
 													#include <stdlib.h>	//	Necessário	para	malloc
+													
 													#include <stdio.h>	//	Necessário	para	printf
 															
-													typedef	int	TipoItem;
+													typedef	int	TipoItem	;
 															
 													//	estrutura	para	lista	estatica
 															
@@ -52,7 +55,7 @@
 															
 													Lista*	cria_lista_vazia	(	)	;
 																
-													//	Testa	se	uma	lista	evazia
+													//	Testa	se	uma	lista	e	vazia
 															
 													int	vazia	(	Lista*	l	)	;
 															
